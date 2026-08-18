@@ -4,6 +4,7 @@ class_name CharacterInstance
 
 # NOTE: May be unnecessary
 #signal character_initialized
+signal character_downed(character:CharacterInstance)
 
 var affinities:Dictionary[DamageType,GameState.AFFINITY] = {}
 
@@ -72,3 +73,14 @@ func initialize_from_resource(res:CharacterResource):
 			affinities[i] = res.affinities[i]
 	
 	#character_initialized.emit()
+
+func take_damage(damage_amount:int):
+	character_statistics.current_health_points -= damage_amount
+	if character_statistics.current_health_points < 1:
+		character_down = true
+		character_downed.emit(self)
+
+func heal(heal_amount:int):
+	character_statistics.current_health_points += heal_amount
+	if character_statistics.current_health_points > character_statistics.max_health_points:
+		character_statistics.current_health_points = character_statistics.max_health_points

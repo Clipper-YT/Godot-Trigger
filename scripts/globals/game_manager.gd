@@ -20,7 +20,7 @@ var player_instances:Array[CharacterInstance]
 var inventory:Dictionary = {}
 
 ##Stores all possible damage types/sources of damage.
-var damage_types:Array[DamageType] = [
+var damage_types:Array[DamageType] = [ # NOTE: These types are examples!
 	load("res://scripts/actions/damage_types/fire_damage.tres"),
 	load("res://scripts/actions/damage_types/melee_damage.tres"),
 	load("res://scripts/actions/damage_types/water_damage.tres"),
