@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DamageType" format=3 uid="uid://mgmbfsab6mrn"]
+
+[ext_resource type="Script" uid="uid://r6djhuw3q25l" path="res://scripts/actions/damage_type.gd" id="1_d21rb"]
+
+[resource]
+script = ExtResource("1_d21rb")
+type_name = "Melee"
+type_description = "Melee damage is simply damage that is dealt with direct physical impact, e.g. a punch, a bat whack, a sword slice, etc."
+metadata/_custom_type_script = "uid://r6djhuw3q25l"

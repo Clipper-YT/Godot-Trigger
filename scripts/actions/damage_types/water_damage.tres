@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DamageType" format=3 uid="uid://dptt4vfwcye3"]
+
+[ext_resource type="Script" uid="uid://r6djhuw3q25l" path="res://scripts/actions/damage_type.gd" id="1_xaecm"]
+
+[resource]
+script = ExtResource("1_xaecm")
+type_name = "Water"
+type_description = "Water magic is about feeling and controlling the ebb and flow of the matter that makes up the liquid: it is not terribly complex to learn, but one of the most difficult to master."
+metadata/_custom_type_script = "uid://r6djhuw3q25l"

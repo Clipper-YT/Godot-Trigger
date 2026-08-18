@@ -18,6 +18,10 @@ boot_splash/stretch_mode=0
 boot_splash/image="uid://ihixg35a1x2m"
 config/icon="uid://ctq4erbxpgmmf"
 
+[autoload]
+
+GameState="*uid://cj23sin83ydmx"
+
 [debug]
 
 gdscript/warnings/unassigned_variable=0

@@ -5,6 +5,8 @@ class_name CharacterInstance
 # NOTE: May be unnecessary
 #signal character_initialized
 
+var affinities:Dictionary[DamageType,GameState.AFFINITY] = {}
+
 ##The Resource used as the base for the character, if that method was used to initialize.
 var character_resource:CharacterResource
 
@@ -62,5 +64,11 @@ func initialize_from_resource(res:CharacterResource):
 		character_armor_special = ArmorItem.new()
 	if !character_weapon:
 		character_weapon = WeaponItem.new()
+	
+	for i in GameState.damage_types:
+		if !(i in res.affinities):
+			affinities[i] = GameState.AFFINITY.NORMAL
+		else:
+			affinities[i] = res.affinities[i]
 	
 	#character_initialized.emit()
