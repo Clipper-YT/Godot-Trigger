@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://bqcsw385xldij"]
+
+[ext_resource type="Script" uid="uid://d3jwudq5uw3j" path="res://scripts/characters/statistic_resource.gd" id="1_o2ilu"]
+[ext_resource type="Script" uid="uid://dw0mmpv6vonnq" path="res://scripts/characters/character_resource.gd" id="1_s3vma"]
+
+[sub_resource type="Resource" id="Resource_o2ilu"]
+script = ExtResource("1_o2ilu")
+attack = 10
+defense = 5
+speed = 6
+ingenuity = 2
+critical = 2
+level = 3
+metadata/_custom_type_script = "uid://d3jwudq5uw3j"
+
+[resource]
+script = ExtResource("1_s3vma")
+character_name = "Player Character 1"
+character_statistics = SubResource("Resource_o2ilu")
+metadata/_custom_type_script = "uid://dw0mmpv6vonnq"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://ca02qcrp72b8n"]
+
+[ext_resource type="Script" uid="uid://d3jwudq5uw3j" path="res://scripts/characters/statistic_resource.gd" id="1_mxe1o"]
+[ext_resource type="Script" uid="uid://dw0mmpv6vonnq" path="res://scripts/characters/character_resource.gd" id="2_dcsv2"]
+
+[sub_resource type="Resource" id="Resource_dfwkm"]
+script = ExtResource("1_mxe1o")
+max_health_points = 25
+attack = 7
+defense = 3
+speed = 12
+ingenuity = 15
+critical = 12
+level = 3
+experience = 125
+metadata/_custom_type_script = "uid://d3jwudq5uw3j"
+
+[resource]
+script = ExtResource("2_dcsv2")
+character_name = "Enemy Character 1"
+character_statistics = SubResource("Resource_dfwkm")
+metadata/_custom_type_script = "uid://dw0mmpv6vonnq"

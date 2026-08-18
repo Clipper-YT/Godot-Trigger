@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://ns1byipcy222"]
+
+[ext_resource type="Script" uid="uid://dflvj1t1v5a1m" path="res://scripts/items/armor_item.gd" id="1_1e0ro"]
+[ext_resource type="Script" uid="uid://d3jwudq5uw3j" path="res://scripts/characters/statistic_resource.gd" id="1_65oki"]
+[ext_resource type="Script" uid="uid://dw0mmpv6vonnq" path="res://scripts/characters/character_resource.gd" id="2_cgho7"]
+[ext_resource type="Script" uid="uid://8ylpflmnkht4" path="res://scripts/items/modifiers/stat_modifier.gd" id="2_kbw6u"]
+
+[sub_resource type="Resource" id="Resource_ntvg0"]
+script = ExtResource("2_kbw6u")
+modifier_name = "SpeedMod"
+modifier_description = "Modifies Speed"
+metadata/_custom_type_script = "uid://8ylpflmnkht4"
+
+[sub_resource type="Resource" id="Resource_wnd7o"]
+script = ExtResource("1_1e0ro")
+slot = 0
+stat_modifiers = Array[ExtResource("2_kbw6u")]([SubResource("Resource_ntvg0")])
+item_name = "Leeroy"
+item_description = "Just Ran In"
+metadata/_custom_type_script = "uid://dflvj1t1v5a1m"
+
+[sub_resource type="Resource" id="Resource_1e0ro"]
+script = ExtResource("1_65oki")
+max_effort_points = 10
+attack = 6
+defense = 8
+speed = 3
+critical = 3
+level = 2
+metadata/_custom_type_script = "uid://d3jwudq5uw3j"
+
+[resource]
+script = ExtResource("2_cgho7")
+character_name = "Player Character 2"
+character_statistics = SubResource("Resource_1e0ro")
+character_armor_head = SubResource("Resource_wnd7o")
+metadata/_custom_type_script = "uid://dw0mmpv6vonnq"
