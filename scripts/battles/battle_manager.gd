@@ -1,4 +1,5 @@
 extends Node
+##The base class for everything battle system.
 class_name BattleManager
 
 ##The total XP pool given to the player side.
@@ -28,7 +29,12 @@ func add_all_characters(
 
 ##Executes a [code]BattleAction[/code] coming from the user and affecting the targets.
 func execute_action(action:BattleAction, user:CharacterInstance, targets:Array[CharacterInstance]):
-	pass # TODO: Actually work BattleActions out
+	var results:Array
+	
+	for fx in action.effects:
+		results.append(fx.apply(user, targets))
+	
+	return results
 
 ##Returns true if either the player side is empty or all characters on that side are down.
 func check_defeat():

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ihixg35a1x2m"
-path="res://.godot/imported/godot_trigger_logo.png-9276e24f5ddf473c1aa0cc4204102092.ctex"
+path="res://.godot/imported/godot_trigger_logo.png-56e55f307cdac0cb927bf220e65d90fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/godot_trigger_logo.png"
-dest_files=["res://.godot/imported/godot_trigger_logo.png-9276e24f5ddf473c1aa0cc4204102092.ctex"]
+source_file="res://sprites/core/godot_trigger_logo.png"
+dest_files=["res://.godot/imported/godot_trigger_logo.png-56e55f307cdac0cb927bf220e65d90fb.ctex"]
 
 [params]
 

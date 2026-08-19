@@ -36,6 +36,14 @@ window/size/viewport_height=480
 window/size/mode=2
 window/stretch/mode="viewport"
 
+[file_customization]
+
+folder_colors={
+"res://scenes/core/": "red",
+"res://scripts/": "blue",
+"res://sprites/core/": "red"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

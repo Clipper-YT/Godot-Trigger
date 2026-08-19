@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://4qwg443d64ux"]
 
-[ext_resource type="Script" uid="uid://dt7vt0d6corv" path="res://scripts/battles/battle_tester.gd" id="1_wnd7o"]
+[ext_resource type="Script" uid="uid://dt7vt0d6corv" path="res://scenes/framework_testing/battle_tester.gd" id="1_wnd7o"]
 
 [node name="BattleTesterScene" type="Control" unique_id=480793335]
 layout_mode = 3

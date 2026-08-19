@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BattleAction" format=3 uid="uid://b4amu4pieqtxd"]
+
+[ext_resource type="Script" uid="uid://dxdmeias0lb2k" path="res://scripts/actions/action_effects/action_effect.gd" id="1_l8tuu"]
+[ext_resource type="Resource" uid="uid://daf857aooa217" path="res://data/action_effects/melee_damage.tres" id="2_dyosj"]
+[ext_resource type="Script" uid="uid://clp845rdlkh0l" path="res://scripts/actions/battle_action.gd" id="2_jnkx4"]
+
+[resource]
+script = ExtResource("2_jnkx4")
+action_name = "Attack"
+action_description = "Generic attack"
+effects = Array[ExtResource("1_l8tuu")]([ExtResource("2_dyosj")])
+metadata/_custom_type_script = "uid://clp845rdlkh0l"
