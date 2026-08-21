@@ -2,8 +2,10 @@ extends Node
 ##A class for loading and managing StatisticResource or saved statistic data for use in Characters.
 class_name StatisticInstance
 
+##Emitted once the instance is ready for use.
 signal statistic_instance_ready
 
+##The statistic resource used to load this instance.
 var statistic_resource:StatisticResource
 
 # Limited Statistics

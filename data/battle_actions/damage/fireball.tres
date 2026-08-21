@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BattleAction" format=3 uid="uid://sw4ch6g1euts"]
+
+[ext_resource type="Script" uid="uid://dxdmeias0lb2k" path="res://scripts/actions/action_effect.gd" id="1_ssxc6"]
+[ext_resource type="Resource" uid="uid://dlomu1c8ymb51" path="res://data/action_effects/effects/damage/fire_damage.tres" id="2_ssxc6"]
+[ext_resource type="Script" uid="uid://clp845rdlkh0l" path="res://scripts/actions/battle_action.gd" id="3_xckih"]
+
+[resource]
+script = ExtResource("3_xckih")
+action_name = "Fireball"
+action_description = "I CAST FIREBALL (Roll 8d6 Fire Damage)"
+effects = Array[ExtResource("1_ssxc6")]([ExtResource("2_ssxc6")])
+metadata/_custom_type_script = "uid://clp845rdlkh0l"

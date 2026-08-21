@@ -4,8 +4,10 @@ class_name CharacterInstance
 
 # NOTE: May be unnecessary
 #signal character_initialized
+##Emitted if the character is downed.
 signal character_downed(character:CharacterInstance)
 
+##The affinities of this character. Defaults to NORMAL if unset.
 var affinities:Dictionary[DamageType,GameState.AFFINITY] = {}
 
 ##The Resource used as the base for the character, if that method was used to initialize.
@@ -28,6 +30,8 @@ var character_armor_special:ArmorItem
 
 ##The current state of the Active Time Battle gauge, if it is the combat system in use.
 var atb_gauge_state:int = 0
+##Variable for the player being ready in Active Time Battle.
+var atb_ready:bool = false
 
 ##Variable for the character being down in combat or not.
 var character_down := false
@@ -35,7 +39,7 @@ var character_down := false
 ##Gets a statistic from its name. Has the option to ignore armor modifiers and return the character's base statistic.
 func get_statistic(statistic_name:String, include_armor_modifiers:bool = true):
 	var final_stat:int = character_statistics.get(statistic_name)
-	var armor_modifiers:Array[StatModifier] = character_armor_head.stat_modifiers + character_armor_chest.stat_modifiers + character_armor_special.stat_modifiers + character_weapon.modifiers
+	var armor_modifiers:Array[StatModifier] = character_armor_head.stat_modifiers + character_armor_chest.stat_modifiers + character_armor_special.stat_modifiers + character_weapon.stat_modifiers
 	
 	for i in armor_modifiers:
 		if i.modified_statistic == statistic_name:
@@ -74,13 +78,27 @@ func initialize_from_resource(res:CharacterResource):
 	
 	#character_initialized.emit()
 
+##Deals the specified amount of damage, and downs the character if HP drops below 1.
 func take_damage(damage_amount:int):
 	character_statistics.current_health_points -= damage_amount
 	if character_statistics.current_health_points < 1:
 		character_down = true
 		character_downed.emit(self)
 
+##Heals the specified amount of HP, and unsets character_down if applicable.
 func heal(heal_amount:int):
 	character_statistics.current_health_points += heal_amount
 	if character_statistics.current_health_points > character_statistics.max_health_points:
 		character_statistics.current_health_points = character_statistics.max_health_points
+	if character_statistics.current_health_points > 0:
+		character_down = false
+
+##Sets the character's HP to the given amount, and unsets character_down.
+func revive_with_amount(heal_amount:int):
+	set_hp_to_zero()
+	heal(heal_amount)
+	character_down = false
+
+##Sets the character's HP to zero. Not sure why you'd need this outside of other functions.
+func set_hp_to_zero():
+	character_statistics.current_health_points = 0

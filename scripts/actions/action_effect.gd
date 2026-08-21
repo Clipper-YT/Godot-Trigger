@@ -7,5 +7,5 @@ func apply(
 			user:CharacterInstance,
 			targets:Array[CharacterInstance],
 			#battle:BattleManager - Don't need this yet
-		):
-	pass
+		) -> EffectResult:
+	return null

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DamageEffect" format=3 uid="uid://daf857aooa217"]
 
 [ext_resource type="Resource" uid="uid://mgmbfsab6mrn" path="res://data/damage_types/melee_damage.tres" id="1_aj00c"]
-[ext_resource type="Script" uid="uid://djuxt5rpn5c7" path="res://scripts/actions/action_effects/damage_effect.gd" id="2_myxkn"]
+[ext_resource type="Script" uid="uid://djuxt5rpn5c7" path="res://data/action_effects/definitions/damage_effect.gd" id="2_aj00c"]
 
 [resource]
-script = ExtResource("2_myxkn")
+script = ExtResource("2_aj00c")
 damage_type = ExtResource("1_aj00c")
 metadata/_custom_type_script = "uid://djuxt5rpn5c7"

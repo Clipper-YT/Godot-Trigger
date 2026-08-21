@@ -28,11 +28,17 @@ func add_all_characters(
 		add_enemy_character(e)
 
 ##Executes a [code]BattleAction[/code] coming from the user and affecting the targets.
-func execute_action(action:BattleAction, user:CharacterInstance, targets:Array[CharacterInstance]):
-	var results:Array
+func execute_action(action:BattleAction, user:CharacterInstance, targets:Array[CharacterInstance], debug:bool = false):
+	var results:ActionResult = ActionResult.new()
+	
+	results.action_name = action.action_name
+	results.action_description = action.action_description
 	
 	for fx in action.effects:
-		results.append(fx.apply(user, targets))
+		results.effect_results.append(fx.apply(user, targets))
+	
+	if debug:
+		print(results.stringify())
 	
 	return results
 

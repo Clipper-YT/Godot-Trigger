@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BattleAction" format=3 uid="uid://cmlm1yveglo0v"]
+
+[ext_resource type="Script" uid="uid://dxdmeias0lb2k" path="res://scripts/actions/action_effect.gd" id="1_dup0o"]
+[ext_resource type="Resource" uid="uid://g18uk703bsoq" path="res://data/action_effects/effects/healing/generic_healing_spell.tres" id="2_qptw1"]
+[ext_resource type="Script" uid="uid://clp845rdlkh0l" path="res://scripts/actions/battle_action.gd" id="2_v6y4p"]
+
+[resource]
+script = ExtResource("2_v6y4p")
+action_name = "Generic Healing Spell"
+action_description = "What it says on the tin. Restores (Magic x 25) / 2 HP."
+effects = Array[ExtResource("1_dup0o")]([ExtResource("2_qptw1")])
+metadata/_custom_type_script = "uid://clp845rdlkh0l"
