@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="CharacterResource" format=3 uid="uid://ns1byipcy222"]
 
 [ext_resource type="Script" uid="uid://dflvj1t1v5a1m" path="res://scripts/items/armor_item.gd" id="1_1e0ro"]
-[ext_resource type="Script" uid="uid://d3jwudq5uw3j" path="res://scripts/characters/statistic_resource.gd" id="1_65oki"]
-[ext_resource type="Script" uid="uid://r6djhuw3q25l" path="res://scripts/actions/damage_type.gd" id="1_kbw6u"]
+[ext_resource type="Script" uid="uid://d3jwudq5uw3j" path="res://scripts/statistics/statistic_resource.gd" id="1_65oki"]
+[ext_resource type="Script" uid="uid://r6djhuw3q25l" path="res://scripts/damage/damage_type.gd" id="1_kbw6u"]
 [ext_resource type="Script" uid="uid://dw0mmpv6vonnq" path="res://scripts/characters/character_resource.gd" id="2_cgho7"]
-[ext_resource type="Script" uid="uid://8ylpflmnkht4" path="res://scripts/items/modifiers/stat_modifier.gd" id="2_kbw6u"]
+[ext_resource type="Script" uid="uid://8ylpflmnkht4" path="res://scripts/modifiers/stat_modifier.gd" id="2_kbw6u"]
 
 [sub_resource type="Resource" id="Resource_ntvg0"]
 script = ExtResource("2_kbw6u")

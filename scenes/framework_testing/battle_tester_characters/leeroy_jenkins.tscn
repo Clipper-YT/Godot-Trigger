@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bndf4nf5mf5ps"]
+
+[ext_resource type="Script" uid="uid://drnw4ks1ropqt" path="res://scenes/framework_testing/battle_tester_characters/leeroy_jenkins.gd" id="1_v6wn3"]
+[ext_resource type="Texture2D" uid="uid://c6l34wpna6bk8" path="res://sprites/characters/example/leeroy jenkins.png" id="2_8biuj"]
+
+[node name="LeeroyJenkins" type="CharacterBody2D" unique_id=1345267853 node_paths=PackedStringArray("sprite", "animator")]
+script = ExtResource("1_v6wn3")
+sprite = NodePath("Sprite2D")
+animator = NodePath("AnimationPlayer")
+metadata/_custom_type_script = "uid://bju4p2e4m1c75"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1842803679]
+scale = Vector2(2, 2)
+texture = ExtResource("2_8biuj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1639912161]

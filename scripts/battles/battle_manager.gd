@@ -87,17 +87,3 @@ func remove_character_from_enemies(character:CharacterInstance):
 	if character in enemy_side:
 		var location = enemy_side.find(character)
 		enemy_side.remove_at(location)
-
-# TODO: Move to TurnBasedController:
-#signal characters_initialized(characters:Array)
-#var turn_order:Array[CharacterInstance] = [] 
-#func initialize_characters():
-	#turn_order.clear()
-	#turn_order = player_side + enemy_side
-	#
-	#turn_order.sort_custom(
-		#func(a:CharacterInstance, b:CharacterInstance):
-			#return a.get_statistic("speed") > b.get_statistic("speed")
-	#)
-	#
-	#characters_initialized.emit(turn_order)

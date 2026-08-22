@@ -28,6 +28,9 @@ var character_armor_special:ArmorItem
 
 # Other variables
 
+##The VisibleCharacter Scene for this character.
+var visible_character_scene:PackedScene
+
 ##The current state of the Active Time Battle gauge, if it is the combat system in use.
 var atb_gauge_state:int = 0
 ##Variable for the player being ready in Active Time Battle.
@@ -69,6 +72,8 @@ func initialize_from_resource(res:CharacterResource):
 		character_armor_special = ArmorItem.new()
 	if !character_weapon:
 		character_weapon = WeaponItem.new()
+	
+	visible_character_scene = res.visible_character_scene
 	
 	for i in GameState.damage_types:
 		if !(i in res.affinities):

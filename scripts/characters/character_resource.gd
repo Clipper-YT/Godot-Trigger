@@ -16,3 +16,5 @@ class_name CharacterResource
 @export var character_armor_special:ArmorItem
 ##List of affinities to specific damage types.
 @export var affinities:Dictionary[DamageType,GameState.AFFINITY] = {}
+##The VisibleCharacter Scene for this character.
+@export var visible_character_scene:PackedScene

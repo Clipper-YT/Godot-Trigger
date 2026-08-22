@@ -31,7 +31,7 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/size/viewport_width=860
+window/size/viewport_width=856
 window/size/viewport_height=480
 window/size/mode=2
 window/stretch/mode="viewport"
@@ -50,4 +50,5 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
